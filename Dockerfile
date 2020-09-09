@@ -1,6 +1,6 @@
 FROM ubuntu
 ENV DEBIAN_FRONTEND="noninteractive"
-RUN apt update && apt install -y maven npm git
+RUN apt update && apt install -y maven git
 RUN cd /root/ && git clone https://github.com/Jokernauten/react-java.git
 WORKDIR /root/react-java
 RUN mvn clean install
