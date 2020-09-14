@@ -1,7 +1,7 @@
 FROM ubuntu
 ENV DEBIAN_FRONTEND="noninteractive"
 RUN apt update && apt install -y maven
-ADD /var/lib/jenkins/workspace/java /root/
+ADD . /root/
 #&& git clone https://github.com/Jokernauten/react-java.git
 WORKDIR /root
 RUN mvn clean install
