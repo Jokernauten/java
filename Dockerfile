@@ -1,8 +1,6 @@
 FROM ubuntu
 ENV DEBIAN_FRONTEND="noninteractive"
 RUN apt update && apt install -y maven git
-#RUN cd /root/ && git clone https://github.com/Jokernauten/java.git
-#WORKDIR /root/java
 ADD . /root/java/
 WORKDIR /root/java
 RUN mvn clean install
