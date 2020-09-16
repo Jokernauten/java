@@ -1,6 +1,3 @@
-#FROM ubuntu
-#ENV DEBIAN_FRONTEND="noninteractive"
-#RUN apt update && apt install -y maven git
 FROM maven
 ADD . /root/java/
 WORKDIR /root/java
