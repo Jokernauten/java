@@ -1,9 +1,5 @@
-FROM ubuntu
-ENV DEBIAN_FRONTEND="noninteractive"
-RUN apt update && apt install -y maven
-ADD . /root/
-#&& git clone https://github.com/Jokernauten/react-java.git
-WORKDIR /root
+FROM openjdk
+ADD target/users-0.0.1-SNAPSHOT.jar java.jar
 RUN mvn clean install
-CMD java -jar target/users-0.0.1-SNAPSHOT.jar
+CMD java -jar java.jar
 EXPOSE 8080
